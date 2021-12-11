@@ -14,12 +14,14 @@ public class Calculation {
         return result;
     }
 
-    private void division(){
-
+    private double division(){
+        result = num1 / num2;
+        return result;
     }
 
-    private void multifly(){
-
+    private double multifly(){
+        result = num1 * num2;
+        return result;
     }
 
     public String getCal() {
