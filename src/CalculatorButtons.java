@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class CalculatorButtons {
+    private double num;
     private double num1;
     private double num2;
     private String arithmeticOperation;
@@ -8,15 +9,18 @@ public class CalculatorButtons {
     Scanner scan = new Scanner(System.in);
 
     public void enterNum1(){
+        checkNum();
         this.num1 = scan.nextDouble();
     }
 
     public void enterNum2(){
+        checkNum();
         this.num2 = scan.nextDouble();
     }
 
     public void enterArithmeticOperation(){
-        this.arithmeticOperation = scan.next();
+        checkArithmeticOperation();
+//        this.arithmeticOperation = scan.next();
     }
 
     public double getNum1() {
@@ -29,6 +33,17 @@ public class CalculatorButtons {
 
     public String getArithmeticOperation() {
         return arithmeticOperation;
+    }
+
+    private void checkNum(){
+        while (!scan.hasNextDouble()){
+            System.out.println("Please Enter Number");
+            scan.next();
+        }
+    }
+
+    private void checkArithmeticOperation(){
+
     }
 
     @Override
