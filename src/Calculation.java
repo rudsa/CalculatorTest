@@ -6,25 +6,21 @@ public class Calculation {
 
     private double plus(){
         result = num1 + num2;
-        System.out.println(result);
         return result;
     }
 
     private double minus(){
         result = num1 - num2;
-        System.out.println(result);
         return result;
     }
 
     private double division(){
         result = num1 / num2;
-        System.out.println(result);
         return result;
     }
 
     private double multifly(){
         result = num1 * num2;
-        System.out.println(result);
         return result;
     }
 
@@ -55,7 +51,7 @@ public class Calculation {
     void calculationStart(){
         switch (getArithmeticOperation()){
             case "+" :{
-                plus();
+                System.out.println(plus());
             }
             case "-" :{
                 minus();
@@ -67,7 +63,6 @@ public class Calculation {
                 division();
             }
             default:{
-                System.out.println(result);
                 break;
             }
         }
