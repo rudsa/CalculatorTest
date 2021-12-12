@@ -19,8 +19,8 @@ public class CalculatorButtons {
     }
 
     public void enterArithmeticOperation(){
-        checkArithmeticOperation();
-//        this.arithmeticOperation = scan.next();
+//        checkArithmeticOperation();
+        this.arithmeticOperation = scan.next();
     }
 
     public double getNum1() {

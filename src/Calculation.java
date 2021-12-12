@@ -13,13 +13,11 @@ public class Calculation {
     }
 
     private double plus(){
-        result = num1 + num2;
-        return result;
+        return result = num1 + num2;
     }
 
     private double minus(){
-        result = num1 - num2;
-        return result;
+        return result = num1 - num2;
     }
 
     private double division(){
@@ -28,8 +26,12 @@ public class Calculation {
     }
 
     private double multifly(){
-        result = num1 * num2;
-        return result;
+        return result = num1 * num2;
+
+    }
+
+    private double mod(){
+        return result = num1 % num2;
     }
 
     private String getArithmeticOperation() {
@@ -80,7 +82,12 @@ public class Calculation {
                 division();
                 break;
             }
+            case "%":{
+                mod();
+                break;
+            }
             default:{
+                System.out.println("Please Enter ArithmeticOperation");
                 break;
             }
         }
