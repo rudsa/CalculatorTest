@@ -10,6 +10,8 @@ public class Calculator {
         calButtons.enterNum2();
         calDisplay.displayArithmeticOperation(calButtons);
         Calculation cal = new Calculation();
-
+        cal.setCalculation(calButtons);
+        cal.checkArithmeticOperation();
+        calDisplay.displayResult(cal);
     }
 }

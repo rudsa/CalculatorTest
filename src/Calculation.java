@@ -4,6 +4,14 @@ public class Calculation {
     private double num2;
     private double result;
 
+    public double getResult() {
+        return result;
+    }
+
+    public void setResult(double result) {
+        this.result = result;
+    }
+
     private double plus(){
         result = num1 + num2;
         return result;
@@ -24,28 +32,58 @@ public class Calculation {
         return result;
     }
 
-    public String getArithmeticOperation() {
+    private String getArithmeticOperation() {
         return arithmeticOperation;
     }
 
-    public void setArithmeticOperation(String arithmeticOperation) {
+    private void setArithmeticOperation(String arithmeticOperation) {
         this.arithmeticOperation = arithmeticOperation;
     }
 
-    public double getNum1() {
+    private double getNum1() {
         return num1;
     }
 
-    public void setNum1(double num1) {
+    private void setNum1(double num1) {
         this.num1 = num1;
     }
 
-    public double getNum2() {
+    private double getNum2() {
         return num2;
     }
 
-    public void setNum2(double num2) {
+    private void setNum2(double num2) {
         this.num2 = num2;
+    }
+
+    public void setCalculation(CalculatorButtons calButtons){
+        setNum1(calButtons.getNum1());
+        setNum2(calButtons.getNum2());
+        setArithmeticOperation(calButtons.getArithmeticOperation());
+    }
+
+    public void checkArithmeticOperation(){
+        switch (getArithmeticOperation()){
+            case "+":{
+                plus();
+                break;
+            }
+            case "-":{
+                minus();
+                break;
+            }
+            case "*":{
+                multifly();
+                break;
+            }
+            case "/":{
+                division();
+                break;
+            }
+            default:{
+                break;
+            }
+        }
     }
 
     void calculationStart(){
